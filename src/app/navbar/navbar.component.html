@@ -1,0 +1,52 @@
+<!-- 
+<app-loading></app-loading>
+<div>
+    <mat-list>
+    <mat-list-item> Pepper </mat-list-item>
+    <mat-list-item> Salt </mat-list-item>
+    <mat-list-item> Paprika </mat-list-item>
+   </mat-list>
+
+</div>
+<button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+<router-outlet></router-outlet>
+<app-footer></app-footer> -->
+
+
+<app-loading></app-loading>
+<mat-drawer-container class="example-container" [hasBackdrop]="hasBackdrop.value">
+    <mat-drawer #drawer [mode]="mode.value"><mat-list>
+    <mat-list-item><img src="../../assets/images/logo-side_bar.png" alt="" class="img-fluid"></mat-list-item>
+    <mat-list-item>Emitir novo certificado</mat-list-item>
+    <mat-list-item>certificado emitidos</mat-list-item>
+    <mat-list-item>Cadastro de dependentes</mat-list-item>
+    <mat-list-item>Informações sobre o seguro</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+    <mat-drawer-content>
+      <button class="btn" mat-raised-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+      <span>Menu</span>
+      <mat-form-field>
+        <mat-select #mode value="side">
+          <mat-option value="side">Side</mat-option>
+          <mat-option value="over">Over</mat-option>
+          <mat-option value="push">Push</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select #hasBackdrop>
+          <mat-option>Unset</mat-option>
+          <mat-option [value]="true">True</mat-option>
+          <mat-option [value]="false">False</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+    </mat-drawer-content>
+  </mat-drawer-container>
+
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

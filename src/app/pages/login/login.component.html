@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="assets/images/ilustracao_titulo02.png" width="50%" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 purple-box py-5">
+            <div class="container">
+                <p class="text-center text-white">Para prosseguir, faça seu login:</p>
+
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4 offset-md-4 border-rounded bg-white">
+                            <mat-form-field color="primary" class="text-center" floatLabel="never" class="d-block border-correction text-center">
+                                <input matInput placeholder="Login" formControlName="login" maxlength="14" cpfMask>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-4 offset-md-4 border-rounded bg-white">
+                            <mat-form-field color="primary" class="text-center" floatLabel="never" class="d-block border-correction text-center">
+                                <input matInput placeholder="Senha" formControlName="password" [type]="hide ? 'password' : 'text'">
+                                <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 text-center">
+                            <button type="submit" mat-flat-button color="accent" class="border-rounded button-size">Avançar</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 text-white text-right border-right">
+                            <small class="cursor" [routerLink]="['/forgotPassword']">Esqueci minha senha</small>
+                        </div>
+                        <div class="col-6 text-white text-left border-left">
+                            <small class="cursor" [routerLink]="['/firstAccess']">Primeiro acesso</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

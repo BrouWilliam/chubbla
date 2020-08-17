@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+// Copy the palettes from your selected theme (usually theme.scss).
+$app-primary: mat-palette($mat-deep-purple);
+$app-accent:  mat-palette($mat-amber);
+$app-warn:    mat-palette($mat-red);
+$app-success: mat-palette($mat-green);
+
+// Create your Sass color vars (will be available in all the project)
+$primary: mat-color($app-primary);
+$accent: mat-color($app-accent);
+$warn: mat-color($app-warn);
+$success: mat-color($app-success);
+
+$link-color: #3f51b5;
+$link-hover-color: currentColor;
+$link-hover-decoration: none;
+$label-margin-bottom: 0;

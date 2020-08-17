@@ -1,0 +1,71 @@
+@import "variables";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
+@import '~normalize.css';
+@import "reset";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.purple-box {
+    background-color: $primary;
+}
+
+.border-rounded {
+    border-radius: 40px !important;
+}
+
+.border-correction {
+    margin-bottom: -1.255em;
+    margin-top: -0.5em;
+}
+
+.button-size {
+    padding: 0 40px !important;
+}
+
+// Disable underline on input
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: unset !important;
+}
+
+.mat-form-field-appearance-legacy.mat-form-field-invalid:not(.mat-focused) .mat-form-field-ripple {
+    height: unset !important;
+}
+
+.mat-form-field.mat-form-field-invalid .mat-form-field-ripple, .mat-form-field.mat-form-field-invalid .mat-form-field-ripple.mat-accent {
+    background-color: transparent !important;
+}
+
+// END Disable underline on input
+
+.snackbar-success {
+    color: $success;
+}
+
+.snackbar-error {
+    color: $warn;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
